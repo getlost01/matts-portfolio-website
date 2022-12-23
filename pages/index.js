@@ -2,7 +2,7 @@ import Head from "next/head";
 import { BsFillMoonStarsFill } from "react-icons/bs";
 import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
 import Image from "next/image";
-import matt from "/public/IMG_3109.JPG";
+// import matt from "/public/IMG_3109.JPG";
 import pokemonProject from "/public/Screenshot 2022-12-21 at 5.30.35 PM.png";
 import img1 from "/public/Screenshot 2022-12-21 at 5.32.07 PM.png";
 import img2 from "/public/Screenshot 2022-12-21 at 5.32.33 PM.png";
@@ -17,7 +17,6 @@ import {
   DiGit,
 } from "react-icons/di";
 import { useState } from "react";
-import mLogo from "/public/MM logo.png";
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
@@ -64,7 +63,7 @@ export default function Home() {
 
           <div className="relative mx-auto rounded-full w-80 h-80 overflow-hidden">
             <Image
-              src={matt}
+              src="/public/IMG_3109.JPG"
               className="rounded-full"
               layout="fill"
               objectFit="cover"
