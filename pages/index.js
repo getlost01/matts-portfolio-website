@@ -1,12 +1,15 @@
 import Head from "next/head";
 import { BsFillMoonStarsFill } from "react-icons/bs";
+import { CgDarkMode } from "react-icons/cg";
 import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
 import Image from "next/image";
-import matt from "/public/myphoto.png";
-import pokemonProject from "/public/Screenshot 2022-12-21 at 5.30.35 PM.png";
-import img1 from "/public/Screenshot 2022-12-21 at 5.32.07 PM.png";
-import img2 from "/public/Screenshot 2022-12-21 at 5.32.33 PM.png";
-import img3 from "/public/Screenshot 2022-12-21 at 5.32.46 PM.png";
+
+import matt from "public/IMG_3109.JPG";
+import pokemonProject from "public/Screenshot 2022-12-21 at 5.30.35 PM.png";
+import img1 from "public/Screenshot 2022-12-21 at 5.32.07 PM.png";
+import img2 from "public/Screenshot 2022-12-21 at 5.32.33 PM.png";
+import img3 from "public/Screenshot 2022-12-21 at 5.32.46 PM.png";
+
 import {
   DiJsBadge,
   DiHtml5,
@@ -14,9 +17,13 @@ import {
   DiReact,
   DiPostgresql,
   DiNodejs,
-  DiGit,
+  DiSwift,
 } from "react-icons/di";
 import { useState } from "react";
+
+import devMtnCert from "public/Devmountain certificate.jpg";
+import uvuLogo from "public/utah-valley-university.svg";
+
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
@@ -34,7 +41,7 @@ export default function Home() {
             <h1 className="text-xl dark:text-white">Matt Moon</h1>
             <ul className="flex items-center">
               <li>
-                <BsFillMoonStarsFill
+                <CgDarkMode
                   onClick={() => setDarkMode(!darkMode)}
                   className="cursor-pointer text-xl dark:text-white"
                 />
@@ -102,7 +109,27 @@ export default function Home() {
               <DiHtml5 className=" text-orange-500" />
               <DiPostgresql className=" text-purple-900" />
               <DiNodejs className=" text-green-600" />
+              <DiSwift className="text-orange-500" />
             </div>
+          </div>
+        </section>
+        <section>
+          <p className="text-3xl pt-9 flex justify-center dark:text-white">
+            Education
+          </p>
+          <p className="text-md pt-9 flex justify-center dark:text-white">
+            Completed the Web Development specialization at Devmountain and
+            received a certificate of completion on November 30, 2022.
+          </p>
+          <div className="flex justify-center p-8">
+            <Image src={devMtnCert}></Image>
+          </div>
+          <p className="text-md pt-9 flex justify-center dark:text-white">
+            Currently attending Utah Valley University, in my sophomore year of
+            the Computer Science program.
+          </p>
+          <div className="flex justify-center p-12">
+            <Image src={uvuLogo} width={500} height={250}></Image>
           </div>
         </section>
         {/* projects */}
@@ -159,3 +186,5 @@ export default function Home() {
     </div>
   );
 }
+
+// this is a test to see if my next update will work for the deployment
